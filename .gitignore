@@ -1,0 +1,6 @@
+models/model.pkl
+models/scaler.pkl
+data/dataset.csv
+__pycache__/
+*.pyc
+.env

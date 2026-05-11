@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grid-stability-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: grid-stability-app
+  template:
+    metadata:
+      labels:
+        app: grid-stability-app
+    spec:
+      containers:
+      - name: grid-stability-app
+        image: grid-stability-app:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
